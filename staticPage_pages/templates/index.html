@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>INDEX</title>
+</head>
+<body>
+    {{if .Success}}
+        <h1 id="error">Desculpas, ERRO NESTA PAGINA!</h1>
+    {{else}}
+ <div id="body">
+
+    <div id="top">
+
+    </div>
+    <div class="container">
+
+        <form action="" method="POST">
+            <label class="title-label">Nome</label>
+            <br>
+            <input type="text" name="name" id="name" class="form-control">
+            <br>
+            <label class="title-label">Email</label>
+            <br>
+            <input type="email" name="email" id="email" class="form-control" >
+            <br>
+            <label class="title-label">Password</label>
+            <br>
+            <input type="password" name="password" id="password" class="form-control">
+            <br>
+            <br>
+            <input type="submit" value="OK" class="button">
+
+        </form>
+    {{end}}
+
+
+    </div>
+</div>
+    <a href="/file"> FILE </a>
+
+
+</body>
+</html>
