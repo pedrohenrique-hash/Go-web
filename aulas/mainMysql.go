@@ -12,7 +12,7 @@ import (
 
 func main() {
 
-	db, err := sql.Open("mysql", "root:example@(172.19.0.3:3306)/Bank?parseTime=true")
+	db, err := sql.Open("mysql", "root:example@(172.19.0.2:3306)/Bank?parseTime=true")
 	if err != nil {
 		log.Fatal(err)
 

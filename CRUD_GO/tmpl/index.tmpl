@@ -1,0 +1,43 @@
+ {{define "Index"}}
+        {{template "Header"}}
+            {{template "Menu"}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+            <h2>Usuário Cadastrados </h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td> Id </td>
+                        <td> Email</td>
+                        <td> Password</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .}}
+                    <tr>
+                        <td>{{ .Id }}</td>
+                        <td>{{ .Email }}</td>
+                        <td>{{ .Password }}</td>
+                        <td> <a href="/show?id={{ .Id }}" target="_blank">Visualizar </a>| <a href ="/edit?id={{.Id}}"> Editar</a> </td>
+                        </tr>
+
+                        {{end}}
+                        </tbody>
+                    </table>
+
+</body>
+</html>
+
+    {{template "footer"}}
+{{end}}

@@ -17,7 +17,7 @@ type Clients struct {
 	Password string
 }
 
-var tmpl = template.Must(template.ParseGlob("tmpl/*"))
+var tmpl = template.Must(template.ParseGlob("template/*.tmpl"))
 
 func dataBaseConnection() (database *sql.DB) {
 	dbDriver := "mysql"
